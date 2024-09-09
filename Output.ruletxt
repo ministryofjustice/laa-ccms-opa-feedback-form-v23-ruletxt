@@ -1,0 +1,38 @@
+[table-OPM-conclusion]  the beginning of the feedback
+[table-Comment-Level1]  “<h2>Feedback</h2><p>Process: ” + the parent system for output + “</p>” | [1] the screen reached for output is unknown and
+[table-cell-continued]    | [1] the parent system for output is known
+[table-cell-continued]    | [0] and
+[table-cell-continued]    | [0] the parent form name from load is unknown
+[table-cell-continued]    | [1] and
+[table-cell-continued]    | [1] the parent form screen from URL is unknown
+[table-OPM-level1]      “<h2>Feedback</h2><p>Process: ” + the parent form name from load + “</p>” | [1] the parent form name from load is currently known and
+[table-cell-continued]    | [1] the parent form screen from URL is unknown
+[table-OPM-level1]      “<h2>Feedback</h2><p>Process: ” + the parent form name from load + “</p><p>Area of the system: " + the screen reached for output + "</p>” | [1] the parent form name from load is currently known and
+[table-cell-continued]    | [1] the screen reached for output is currently known
+[table-OPM-level1]      "<h2>Feedback</h2><p>Process: " + the parent system for output + "</p><p>Screen reached: " + the parent form screen from URL + "</p>" | [1] the parent system for output is known
+[table-cell-continued]    | [1] and
+[table-cell-continued]    | [1] the parent form screen from URL is known
+[table-OPM-Alternativeconclusion]  "<h2>Feedback</h2><p>Process: " + the parent system for output + "</p><p>Screen reached: " + the parent form screen from URL + "</p>" | [1] otherwise
+[Normal]
+[table-OPM-conclusion]  the middle of the feedback
+[table-OPM-level1]      "<h3>Detail</h3><p>"+ the feedback + “</p><h3>Score</h3><p>None provided</p>” | [1] the parent form name from load is unknown and
+[table-cell-continued]    | [1] the feedback rating is unknown
+[table-OPM-level1]      "<h3>Detail</h3><p>"+ the feedback + “</p><h3>Score</h3><p>” + the feedback rating + “</p>” | [1] The parent form name from load is unknown and
+[table-cell-continued]    | [1] the feedback rating is known
+[table-cell-continued]    | [1] and
+[table-cell-continued]    | [1] the feedback is known
+[table-OPM-level1]      "<h3>Feedback for the new PUI look & feel</h3><p>"+ the reason given for the feedback ranking for the look and feel of the new PUI  + “</p><h3>Score for the new PUI look & feel</h3><p>” + the feedback rating for the look and feel of the new PUI + “</p><h3>Feedback for the new PUI navigation</h3><p>" + the reason given for the feedback ranking of navigating within the new PUI + “</p><h3>Score for the new PUI navigation</h3><p>” + the feedback rating for navigating the new PUI + “</p><h3>Feedback for the new PUI Check My Answers screen</h3><p>" + “</p><h3>Score for the new PUI Check My Answers screen </h3><p>” +  “</p><h3>Overall feedback for the PUI changes</h3><p>" + the reason given for the overall ranking for the PUI changes + “</p><h3>Overall score for the PUI changes</h3><p>” + the overall feedback rating for the PUI changes + "</p>" | [1] The parent form name from load is known and
+[table-cell-continued]    | [1] any
+[table-cell-continued]    | [2]     the parent form name from load = "_beta" or
+[table-cell-continued]    | [2]     the parent form name from load = "_VALUE_NOT_AVAILABLE"
+[table-OPM-Alternativeconclusion]  "<h3>Detail</h3><p>"+ the feedback + “</p><h3>Score</h3><p>” + the feedback rating + “</p>”  | [1] otherwise
+[Normal]
+[Normal]
+[table-OPM-conclusion]  the end of the feedback
+[table-OPM-level1]      “<p>From CCMS user <b>” +the CCMS user ID + "</b> from  <b>" + the CCMS user firm +  “</b></p><p> Timestamp: ” + text(the date and time of the feedback) + “</p>” | [1] the CCMS user ID is visible
+[table-OPM-Alternativeconclusion]  “</p><p>Timestamp: ” + text(the date and time of the feedback) + “</p>” | [1] otherwise
+[Normal]
+[OPM-conclusion]        the date and time of the feedback = currentdatetime()
+[Normal]
+[OPM-conclusion]        the overall rating = trunc((((the feedback ranking for navigating the new PUI + the feedback ranking for the look and feel of the new PUI + the overall feedback ranking for the PUI changes)/18) * 100),0)
+[Normal]

@@ -1,0 +1,57 @@
+[OPM-conclusion]        the CCMS user ID is visible if
+[OPM-level1]            the CCMS user ID is currently known
+[OPM-level1]            and
+[OPM-level1]            the CCMS user ID <> "_VALUE_NOT_AVAILABLE"
+[OPM-blankline]
+[OPM-conclusion]        the CCMS user firm is visible if
+[OPM-level1]            the CCMS user firm is currently known
+[OPM-level1]            and
+[OPM-level1]            the CCMS user firm <> "_VALUE_NOT_AVAILABLE"
+[OPM-blankline]
+[OPM-blankline]
+[OPM-conclusion]        the parent form name input is visible if
+[OPM-level1]            the parent form name from input is currently known
+[OPM-level1]            or
+[OPM-level1]            the parent form is unknown
+[OPM-level1]            or
+[OPM-level1]            the parent form = “Not known”
+[OPM-blankline]         We need the first clause here so the questions remain visible if answered manually.
+[OPM-blankline]         MKJ 02/07/18 - Add new questions for new PUI
+[OPM-conclusion]        the CCMS subsystem question is visible if
+[OPM-level1]            both
+[OPM-level2(]               any
+[OPM-level3(]                   the parent form name from load is unknown or
+[OPM-level3]                    the parent form name from load <> “_beta”
+[OPM-level2)]               and
+[OPM-level2]                the parent form name from input = “CCMS”
+[OPM-level1)]           or
+[OPM-level1]            the parent form name from load = “Beta”
+[OPM-level1]            or
+[OPM-level1]            the parent form name from load = “CCMS Beta”
+[OPM-level1]            or
+[OPM-level1]            the parent form name from load = “Civil”
+[OPM-level1]            or
+[OPM-level1]            the parent form name from load = “CCMS Civil”
+[OPM-blankline]
+[OPM-conclusion]        the new PUI questions are displayed if
+[Comment-Level1]        the parent form name from load is unknown
+[Comment-Level1]        or
+[OPM-level1]            the parent form name from load = “_beta”
+[Comment-Level1]        or
+[Comment-Level1]        the parent form name from load = "_VALUE_NOT_AVAILABLE"
+[OPM-blankline]
+[OPM-conclusion]        the non-CCMS follow-on questions are visible if
+[OPM-level1]            the parent form name from URL is certain
+[OPM-blankline]         This is only for URL-fed situations
+[OPM-blankline]
+[OPM-blankline]
+[OPM-blankline]
+[OPM-blankline]         The below table is to add to the version number on screen so we know what is going on vis-a-vis the environment and test state
+[table-OPM-conclusion]  the system test state information
+[table-OPM-level1]      “(DЄV-t)” | [1] the system environment is unknown
+[table-OPM-level1]      “(XX)” | [1] it is unknown whether the system state is test
+[table-OPM-level1]      “(”+the system environment+ “-t)” | [1] it is certain whether the system state is test and
+[table-cell-continued]    | [1] the system state is test
+[table-OPM-Alternativeconclusion]  “(”+the system environment+ “)” | [1] otherwise
+[OPM-blankline]
+[OPM-blankline]

@@ -1,0 +1,48 @@
+[OPM-blankline]
+[OPM-blankline]         This document is a template to be completed as per rulebase needs
+[OPM-blankline]
+[OPM-conclusion]        the system action = “wsaAction-Unknown”
+[OPM-conclusion]        the system submission from = “wsaFrom-Unknown”
+[OPM-conclusion]        the system direct to = “wsaTo-Unknown”
+[OPM-conclusion]        the system opa form = “FeedbackForm”
+[OPM-conclusion]        the system opa form version = rule base version
+[OPM-conclusion]        the system opa form date = rule base date
+[Comment-conclusion]    the system email to = “Unknown@abc.co.uk”
+[Comment-conclusion]    the system email subject = “LAA Form Factory email subject – change as required”
+[Comment-conclusion]    the system email message = “Feedback ” + the users rating + “ “ + the users specific feedback + “ “ + “from ” +the system userid + “ ” + the provider case reference
+[OPM-conclusion]        the system handling = “”
+[OPM-conclusion]        the system email entity data format = “csv”
+[OPM-conclusion]        the system email reply to = “no-reply@justice.gov.uk”
+[OPM-conclusion]        the system email from = “aopa12prd@cz.prd.legalservices.gov.uk”
+[OPM-blankline]
+[OPM-conclusion]        the system email message = the beginning of the feedback + the middle of the feedback + the end of the feedback
+[OPM-blankline]
+[OPM-blankline]         the system email to – set in emails.xlsx
+[OPM-blankline]
+[OPM-blankline]
+[OPM-blankline]
+[OPM-ruletype]          shortcut rule
+[OPM-conclusion]        the system state is test if
+[OPM-level1]            the system environment is unknown
+[OPM-blankline]         Note: this is a catchall if the connector is not working.
+[OPM-blankline]
+[table-OPM-conclusion]  the system email subject
+[table-OPM-level1]      “Feedback for “ + the parent form | [1] it is currently known whether or not the system state is test and
+[table-cell-continued]    | [1] it is certain whether or not the system state is test and
+[table-cell-continued]    | [1] the system state is not test
+[table-OPM-level1]      “**TEST - ” + the system environment + "** ” + “Feedback for “ + the parent form | [1] it is currently known whether or not the system state is test and
+[table-cell-continued]    | [1] it is certain whether or not the system state is test and
+[table-cell-continued]    | [1] the system state is test
+[table-OPM-Alternativeconclusion]  “Feedback for CCMS” | [1] otherwise
+[OPM-blankline]
+[OPM-blankline]         The above attributes are mapped out
+[OPM-blankline]
+[OPM-blankline]
+[OPM-blankline]
+[OPM-conclusion]        The system metadata inputs are known if
+[OPM-level1]            the system environment is known and
+[OPM-level1]            it is known whether the system state is test
+[OPM-blankline]         These attributes are mapped in
+[OPM-blankline]
+[OPM-blankline]
+[Normal]

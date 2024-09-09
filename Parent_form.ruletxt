@@ -1,0 +1,10 @@
+[Normal]                The below table sets the parent form from one of the three possible locations.  If CCMS PUI input is set, it will be set to this (either Civil or Beta).  If a URL parameter is set it will be set to this – currently only ECCLAIM1 or LAAFraudReporting.  Otherwise it will be set by the manual input.
+[Normal]                If forms are added, they need to be accounted for in the emails.xls file and the value list
+[Normal]
+[table-OPM-conclusion]  the parent form
+[table-OPM-level1]      the parent form name from load | [1] the parent form name from load is currently known and
+[table-cell-continued]    | [1] the parent form name from load <> "_VALUE_NOT_AVAILABLE"
+[table-OPM-level1]      the parent form name from URL | [1] the parent form name from URL is currently known
+[table-OPM-level1]      the parent form name from input | [1] the parent form name from input is currently known
+[table-OPM-Alternativeconclusion]  "Not known" | [1] otherwise
+[OPM-conclusion]
